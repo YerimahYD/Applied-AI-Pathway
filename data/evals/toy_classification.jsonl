@@ -1,0 +1,10 @@
+{"id":"1","input":"I loved this product, it works perfectly.","label":"positive"}
+{"id":"2","input":"This is the worst purchase I have ever made.","label":"negative"}
+{"id":"3","input":"Pretty good overall, but shipping was slow.","label":"positive"}
+{"id":"4","input":"It broke after one day. Extremely disappointed.","label":"negative"}
+{"id":"5","input":"Customer support was helpful and resolved my issue.","label":"positive"}
+{"id":"6","input":"Terrible quality and poor packaging.","label":"negative"}
+{"id":"7","input":"Exactly as described. I would buy again.","label":"positive"}
+{"id":"8","input":"Not worth the money at all.","label":"negative"}
+{"id":"9","input":"Decent value for the price.","label":"positive"}
+{"id":"10","input":"I regret buying this. Waste of money.","label":"negative"}
