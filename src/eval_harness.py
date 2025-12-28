@@ -1,7 +1,7 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Sequence
+from typing import Dict, List, Sequence, Tuple
 
 from src.config import load_config
 from src.utils import get_logger
@@ -14,6 +14,14 @@ class Example:
     label: str
 
 
+@dataclass(frozen=True)
+class ErrorCase:
+    id: str
+    input: str
+    label: str
+    prediction: str
+
+
 def load_jsonl(path: Path) -> List[Example]:
     examples: List[Example] = []
     with path.open("r", encoding="utf-8") as f:
@@ -22,19 +30,23 @@ def load_jsonl(path: Path) -> List[Example]:
             if not line:
                 continue
             obj = json.loads(line)
-            examples.append(
-                Example(id=obj["id"], input=obj["input"], label=obj["label"])
-            )
+            examples.append(Example(id=obj["id"], input=obj["input"], label=obj["label"]))
     return examples
 
 
 def baseline_predictor(text: str) -> str:
     """
-    Intentionally naive baseline. We'll replace with model calls later.
+    Intentionally naive baseline. We'll replace this with real model calls later.
     """
     negative_keywords = [
-        "worst", "broke", "disappointed", "terrible", "regret",
-        "waste", "poor", "not worth"
+        "worst",
+        "broke",
+        "disappointed",
+        "terrible",
+        "regret",
+        "waste",
+        "poor",
+        "not worth",
     ]
     t = text.lower()
     for kw in negative_keywords:
@@ -52,7 +64,22 @@ def accuracy(y_true: Sequence[str], y_pred: Sequence[str]) -> float:
     return correct / total if total else 0.0
 
 
-def run_eval(dataset_path: Path) -> Dict[str, float]:
+def collect_errors(examples: Sequence[Example], y_pred: Sequence[str]) -> List[ErrorCase]:
+    errors: List[ErrorCase] = []
+    for ex, pred in zip(examples, y_pred):
+        if ex.label != pred:
+            errors.append(
+                ErrorCase(
+                    id=ex.id,
+                    input=ex.input,
+                    label=ex.label,
+                    prediction=pred,
+                )
+            )
+    return errors
+
+
+def run_eval(dataset_path: Path) -> Tuple[Dict[str, float], List[ErrorCase]]:
     cfg = load_config()
     logger = get_logger("eval_harness", cfg.log_level)
 
@@ -67,10 +94,15 @@ def run_eval(dataset_path: Path) -> Dict[str, float]:
         y_true.append(ex.label)
         y_pred.append(pred)
 
-    report = {
+    errors = collect_errors(examples, y_pred)
+
+    report: Dict[str, float] = {
         "n_examples": float(len(examples)),
         "accuracy": accuracy(y_true, y_pred),
+        "n_errors": float(len(errors)),
     }
 
+    logger.info("Number of errors: %d", len(errors))
     logger.info("Evaluation report: %s", report)
-    return report
+
+    return report, errors
