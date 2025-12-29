@@ -1,3 +1,5 @@
+from src.predictors import Predictor
+
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -79,7 +81,11 @@ def collect_errors(examples: Sequence[Example], y_pred: Sequence[str]) -> List[E
     return errors
 
 
-def run_eval(dataset_path: Path) -> Tuple[Dict[str, float], List[ErrorCase]]:
+def run_eval(
+    dataset_path: Path,
+    predictor: Predictor,
+) -> Tuple[Dict[str, float], List[ErrorCase]]:
+
     cfg = load_config()
     logger = get_logger("eval_harness", cfg.log_level)
 
@@ -90,7 +96,7 @@ def run_eval(dataset_path: Path) -> Tuple[Dict[str, float], List[ErrorCase]]:
     y_pred: List[str] = []
 
     for ex in examples:
-        pred = baseline_predictor(ex.input)
+        pred = predictor.predict(ex.input)
         y_true.append(ex.label)
         y_pred.append(pred)
 

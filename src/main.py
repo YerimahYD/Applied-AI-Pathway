@@ -1,3 +1,5 @@
+from src.predictors import KeywordBaselinePredictor
+
 from pathlib import Path
 
 from src.config import load_config
@@ -13,7 +15,8 @@ def run() -> None:
     logger.info("Starting pipeline...")
 
     dataset_path = Path("data/evals/toy_classification.jsonl")
-    report, errors = run_eval(dataset_path)
+    predictor = KeywordBaselinePredictor()
+    report, errors = run_eval(dataset_path, predictor)
 
     output_path = Path("data/reports/toy_classification_failure_report.json")
     save_failure_report(output_path, report, errors)
