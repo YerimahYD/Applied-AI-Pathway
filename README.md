@@ -1,3 +1,6 @@
+# Applied-AI-Pathway
+This repo documents my applied AI pathway
+
 # Applied AI Pathway
 
 This repository documents my Applied AI execution pathway.
