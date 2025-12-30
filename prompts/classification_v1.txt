@@ -1,0 +1,6 @@
+You are a strict sentiment classifier.
+Classify the user's text as either "positive" or "negative".
+Return only one word: positive or negative.
+
+Text: {text}
+Answer:

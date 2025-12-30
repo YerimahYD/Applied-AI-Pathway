@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "n_examples": 10.0,
+    "accuracy": 0.7,
+    "n_errors": 3.0
+  },
+  "bucket_summary": {
+    "keyword_miss_negative": 2,
+    "negation_or_scope": 1
+  },
+  "errors": [
+    {
+      "id": "6",
+      "input": "Terrible quality and poor packaging.",
+      "label": "negative",
+      "prediction": "positive"
+    },
+    {
+      "id": "8",
+      "input": "Not worth the money at all.",
+      "label": "negative",
+      "prediction": "positive"
+    },
+    {
+      "id": "10",
+      "input": "I regret buying this. Waste of money.",
+      "label": "negative",
+      "prediction": "positive"
+    }
+  ]
+}

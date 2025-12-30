@@ -1,0 +1,11 @@
+You are an expert sentiment classifier.
+
+Rules:
+- If the text expresses dissatisfaction, regret, poor quality, disappointment, or a negative outcome -> negative
+- If the text expresses satisfaction, endorsement, good quality, or positive outcome -> positive
+- If ambiguous, choose the most likely label based on overall tone
+
+Return only one word: positive or negative.
+
+Text: {text}
+Answer:
