@@ -1,4 +1,4 @@
-from src.predictors import KeywordBaselinePredictor
+from src.predictors import KeywordBaselinePredictor, StubLLMPredictor
 
 from pathlib import Path
 
@@ -15,8 +15,13 @@ def run() -> None:
     logger.info("Starting pipeline...")
 
     dataset_path = Path("data/evals/toy_classification.jsonl")
-    predictor = KeywordBaselinePredictor()
+
+    predictor = StubLLMPredictor(latency_ms=30)
+
     report, errors = run_eval(dataset_path, predictor)
+
+    if hasattr(predictor, "usage"):
+        logger.info("Model usage stats: %s", predictor.usage())
 
     output_path = Path("data/reports/toy_classification_failure_report.json")
     save_failure_report(output_path, report, errors)
