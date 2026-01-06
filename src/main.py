@@ -7,17 +7,21 @@ from src.reporting import save_failure_report
 from src.predictors import PromptedStubLLMPredictor
 
 
+
 def run() -> None:
     cfg = load_config()
     logger = get_logger(cfg.project_name, cfg.log_level)
 
     logger.info("Starting pipeline...")
 
-    dataset_path = Path("data/evals/toy_classification.jsonl")
+    dataset_path = Path("data/evals/sentiment_eval_v1.jsonl")
 
-    # Switch between v1 and v2 to compare prompt versions
     prompt_path = Path("prompts/classification_v1.txt")
-    predictor = PromptedStubLLMPredictor(prompt_path=prompt_path, latency_ms=30)
+    predictor = PromptedStubLLMPredictor(
+        prompt_path=prompt_path,
+        latency_ms=0,
+    )
+
 
     report, errors = run_eval(dataset_path, predictor)
 

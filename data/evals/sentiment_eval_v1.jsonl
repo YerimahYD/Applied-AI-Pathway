@@ -1,0 +1,60 @@
+{"id": "1", "input": "Absolutely love this. Works perfectly.", "label": "positive"}
+{"id": "2", "input": "Great quality and fast delivery.", "label": "positive"}
+{"id": "3", "input": "Exceeded my expectations. Highly recommended.", "label": "positive"}
+{"id": "4", "input": "Very satisfied with the purchase.", "label": "positive"}
+{"id": "5", "input": "It performs exactly as described.", "label": "positive"}
+{"id": "6", "input": "Fantastic experience from start to finish.", "label": "positive"}
+{"id": "7", "input": "Customer service was helpful and friendly.", "label": "positive"}
+{"id": "8", "input": "This is the best I’ve bought in a long time.", "label": "positive"}
+{"id": "9", "input": "Superb build quality and great value.", "label": "positive"}
+{"id": "10", "input": "Everything arrived in excellent condition.", "label": "positive"}
+{"id": "11", "input": "I’m impressed with how well it works.", "label": "positive"}
+{"id": "12", "input": "Brilliant product. Would buy again.", "label": "positive"}
+{"id": "13", "input": "Five stars — I’m very happy with it.", "label": "positive"}
+{"id": "14", "input": "So good I ordered a second one.", "label": "positive"}
+{"id": "15", "input": "Works like a charm. No issues at all.", "label": "positive"}
+{"id": "16", "input": "Really pleased with the result.", "label": "positive"}
+{"id": "17", "input": "Better than alternatives I’ve tried.", "label": "positive"}
+{"id": "18", "input": "High quality materials and solid design.", "label": "positive"}
+{"id": "19", "input": "Setup was easy and it runs smoothly.", "label": "positive"}
+{"id": "20", "input": "I’m glad I went with this option.", "label": "positive"}
+{"id": "21", "input": "Reliable and consistent performance.", "label": "positive"}
+{"id": "22", "input": "Packaging was neat and protective.", "label": "positive"}
+{"id": "23", "input": "Great value for the price.", "label": "positive"}
+{"id": "24", "input": "The service was quick and professional.", "label": "positive"}
+{"id": "25", "input": "Comfortable and well-made.", "label": "positive"}
+{"id": "26", "input": "Very good, I have no complaints.", "label": "positive"}
+{"id": "27", "input": "Exactly what I needed. Perfect.", "label": "positive"}
+{"id": "28", "input": "A wonderful experience overall.", "label": "positive"}
+{"id": "29", "input": "It’s been excellent so far.", "label": "positive"}
+{"id": "30", "input": "Top-notch. Worth it.", "label": "positive"}
+{"id": "31", "input": "Terrible quality. Broke immediately.", "label": "negative"}
+{"id": "32", "input": "Not worth the money at all.", "label": "negative"}
+{"id": "33", "input": "I regret buying this. Total waste.", "label": "negative"}
+{"id": "34", "input": "Very disappointed. Poor performance.", "label": "negative"}
+{"id": "35", "input": "Stopped working after one day.", "label": "negative"}
+{"id": "36", "input": "The packaging was damaged and messy.", "label": "negative"}
+{"id": "37", "input": "Awful experience. Would not recommend.", "label": "negative"}
+{"id": "38", "input": "This is the worst product I’ve purchased.", "label": "negative"}
+{"id": "39", "input": "Customer service was unhelpful.", "label": "negative"}
+{"id": "40", "input": "It arrived late and didn’t work.", "label": "negative"}
+{"id": "41", "input": "Cheap materials and poorly made.", "label": "negative"}
+{"id": "42", "input": "It failed within a week.", "label": "negative"}
+{"id": "43", "input": "Completely useless. Do not buy.", "label": "negative"}
+{"id": "44", "input": "I’m unhappy with the quality.", "label": "negative"}
+{"id": "45", "input": "It’s frustrating and unreliable.", "label": "negative"}
+{"id": "46", "input": "Broke during normal use.", "label": "negative"}
+{"id": "47", "input": "The description was misleading.", "label": "negative"}
+{"id": "48", "input": "Bad smell and poor finishing.", "label": "negative"}
+{"id": "49", "input": "Very poor value for the price.", "label": "negative"}
+{"id": "50", "input": "Disappointed — expected much better.", "label": "negative"}
+{"id": "51", "input": "It scratches easily and feels flimsy.", "label": "negative"}
+{"id": "52", "input": "Didn’t match what was advertised.", "label": "negative"}
+{"id": "53", "input": "I had to return it. Not good.", "label": "negative"}
+{"id": "54", "input": "Waste of time and money.", "label": "negative"}
+{"id": "55", "input": "Faulty on arrival. Terrible.", "label": "negative"}
+{"id": "56", "input": "It doesn’t do what it claims.", "label": "negative"}
+{"id": "57", "input": "Not satisfied. Would avoid.", "label": "negative"}
+{"id": "58", "input": "Performance is bad and inconsistent.", "label": "negative"}
+{"id": "59", "input": "Terrible service and rude support.", "label": "negative"}
+{"id": "60", "input": "It’s a complete letdown.", "label": "negative"}

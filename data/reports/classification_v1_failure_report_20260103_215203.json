@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "n_examples": 10.0,
+    "accuracy": 0.9,
+    "n_errors": 1.0
+  },
+  "bucket_summary": {
+    "keyword_overtrigger": 1
+  },
+  "errors": [
+    {
+      "id": "3",
+      "input": "Pretty good overall, but shipping was slow.",
+      "label": "positive",
+      "prediction": "negative"
+    }
+  ]
+}

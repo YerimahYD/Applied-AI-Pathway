@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "n_examples": 10.0,
+    "accuracy": 0.0,
+    "n_errors": 10.0,
+    "abstention_rate": 0.1,
+    "coverage": 0.9,
+    "known_accuracy": 0.0,
+    "effective_accuracy": 0.0,
+    "bucket_summary": {
+      "other": 9,
+      "abstained": 1
+    }
+  },
+  "bucket_summary": {
+    "other": 9,
+    "negation_or_scope": 1
+  },
+  "errors": [
+    {
+      "id": "1",
+      "input": "I loved this product, it works perfectly.",
+      "label": "positive",
+      "prediction": "none",
+      "bucket": "other"
+    },
+    {
+      "id": "2",
+      "input": "This is the worst purchase I have ever made.",
+      "label": "negative",
+      "prediction": "none",
+      "bucket": "other"
+    },
+    {
+      "id": "3",
+      "input": "Pretty good overall, but shipping was slow.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "4",
+      "input": "It broke after one day. Extremely disappointed.",
+      "label": "negative",
+      "prediction": "none",
+      "bucket": "other"
+    },
+    {
+      "id": "5",
+      "input": "Customer support was helpful and resolved my issue.",
+      "label": "positive",
+      "prediction": "none",
+      "bucket": "other"
+    },
+    {
+      "id": "6",
+      "input": "Terrible quality and poor packaging.",
+      "label": "negative",
+      "prediction": "none",
+      "bucket": "other"
+    },
+    {
+      "id": "7",
+      "input": "Exactly as described. I would buy again.",
+      "label": "positive",
+      "prediction": "none",
+      "bucket": "other"
+    },
+    {
+      "id": "8",
+      "input": "Not worth the money at all.",
+      "label": "negative",
+      "prediction": "none",
+      "bucket": "other"
+    },
+    {
+      "id": "9",
+      "input": "Decent value for the price.",
+      "label": "positive",
+      "prediction": "none",
+      "bucket": "other"
+    },
+    {
+      "id": "10",
+      "input": "I regret buying this. Waste of money.",
+      "label": "negative",
+      "prediction": "none",
+      "bucket": "other"
+    }
+  ]
+}

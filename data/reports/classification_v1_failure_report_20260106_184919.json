@@ -1,0 +1,106 @@
+{
+  "summary": {
+    "n_examples": 60.0,
+    "accuracy": 0.8,
+    "n_errors": 12.0,
+    "abstention_rate": 0.0,
+    "coverage": 1.0,
+    "known_accuracy": 0.8,
+    "effective_accuracy": 0.8,
+    "bucket_summary": {
+      "other_negative_miss": 10,
+      "negation_or_scope": 2
+    }
+  },
+  "bucket_summary": {
+    "keyword_miss_negative": 7,
+    "too_short_ambiguous": 3,
+    "negation_or_scope": 2
+  },
+  "errors": [
+    {
+      "id": "35",
+      "input": "Stopped working after one day.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    },
+    {
+      "id": "36",
+      "input": "The packaging was damaged and messy.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    },
+    {
+      "id": "39",
+      "input": "Customer service was unhelpful.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    },
+    {
+      "id": "40",
+      "input": "It arrived late and didn\u2019t work.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    },
+    {
+      "id": "42",
+      "input": "It failed within a week.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    },
+    {
+      "id": "47",
+      "input": "The description was misleading.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    },
+    {
+      "id": "51",
+      "input": "It scratches easily and feels flimsy.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    },
+    {
+      "id": "52",
+      "input": "Didn\u2019t match what was advertised.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    },
+    {
+      "id": "53",
+      "input": "I had to return it. Not good.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "negation_or_scope"
+    },
+    {
+      "id": "56",
+      "input": "It doesn\u2019t do what it claims.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    },
+    {
+      "id": "57",
+      "input": "Not satisfied. Would avoid.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "negation_or_scope"
+    },
+    {
+      "id": "60",
+      "input": "It\u2019s a complete letdown.",
+      "label": "negative",
+      "prediction": "positive",
+      "bucket": "other_negative_miss"
+    }
+  ]
+}

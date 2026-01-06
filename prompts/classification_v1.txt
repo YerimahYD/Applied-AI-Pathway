@@ -1,6 +1,62 @@
-You are a strict sentiment classifier.
-Classify the user's text as either "positive" or "negative".
-Return only one word: positive or negative.
+You decide whether a sentence expresses a positive, negative, or uncertain sentiment.
 
-Text: {text}
+Guidelines:
+- If the sentence expresses dissatisfaction, regret, poor quality, disappointment, or a negative outcome, it is negative.
+- If the sentence expresses satisfaction, endorsement, good quality, or a positive outcome, it is positive.
+- If the sentiment is unclear, mixed, or you are not confident, it is unknown.
+
+Here are examples:
+
+Sentence: "Terrible quality and poor packaging"
+Answer:
+label: negative
+confidence: 0.95
+
+Sentence: "Not worth the money at all"
+Answer:
+label: negative
+confidence: 0.95
+
+Sentence: "I regret buying this, it was a waste of money"
+Answer:
+label: negative
+confidence: 0.96
+
+Sentence: "This product stopped working after one day"
+Answer:
+label: negative
+confidence: 0.90
+
+Sentence: "I am very happy with the service I received"
+Answer:
+label: positive
+confidence: 0.95
+
+Sentence: "The experience was terrible and frustrating"
+Answer:
+label: negative
+confidence: 0.94
+
+Sentence: "Everything worked perfectly and I am satisfied"
+Answer:
+label: positive
+confidence: 0.93
+
+Rules:
+- Valid labels are: positive, negative, unknown
+- If you are not confident, choose: unknown
+- Do not explain your reasoning
+- Do not add extra text
+- Follow the output format exactly
+
+Return your answer in exactly this format (two lines):
+
+label: <positive|negative|unknown>
+confidence: <number between 0.0 and 1.0>
+
+Confidence must be a numeric decimal with digits only (examples: 0.15, 0.70, 0.95).
+Do not write confidence in words.
+Do not include any extra characters.
+
+Sentence: {text}
 Answer:

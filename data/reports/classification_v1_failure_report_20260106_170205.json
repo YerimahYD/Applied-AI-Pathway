@@ -1,0 +1,441 @@
+{
+  "summary": {
+    "n_examples": 60.0,
+    "accuracy": 0.0,
+    "n_errors": 60.0,
+    "abstention_rate": 1.0,
+    "coverage": 0.0,
+    "known_accuracy": 0.0,
+    "effective_accuracy": 0.0,
+    "bucket_summary": {
+      "abstained": 60
+    }
+  },
+  "bucket_summary": {
+    "other": 41,
+    "negation_or_scope": 9,
+    "too_short_ambiguous": 10
+  },
+  "errors": [
+    {
+      "id": "1",
+      "input": "Absolutely love this. Works perfectly.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "2",
+      "input": "Great quality and fast delivery.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "3",
+      "input": "Exceeded my expectations. Highly recommended.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "4",
+      "input": "Very satisfied with the purchase.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "5",
+      "input": "It performs exactly as described.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "6",
+      "input": "Fantastic experience from start to finish.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "7",
+      "input": "Customer service was helpful and friendly.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "8",
+      "input": "This is the best I\u2019ve bought in a long time.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "9",
+      "input": "Superb build quality and great value.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "10",
+      "input": "Everything arrived in excellent condition.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "11",
+      "input": "I\u2019m impressed with how well it works.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "12",
+      "input": "Brilliant product. Would buy again.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "13",
+      "input": "Five stars \u2014 I\u2019m very happy with it.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "14",
+      "input": "So good I ordered a second one.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "15",
+      "input": "Works like a charm. No issues at all.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "16",
+      "input": "Really pleased with the result.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "17",
+      "input": "Better than alternatives I\u2019ve tried.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "18",
+      "input": "High quality materials and solid design.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "19",
+      "input": "Setup was easy and it runs smoothly.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "20",
+      "input": "I\u2019m glad I went with this option.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "21",
+      "input": "Reliable and consistent performance.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "22",
+      "input": "Packaging was neat and protective.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "23",
+      "input": "Great value for the price.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "24",
+      "input": "The service was quick and professional.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "25",
+      "input": "Comfortable and well-made.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "26",
+      "input": "Very good, I have no complaints.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "27",
+      "input": "Exactly what I needed. Perfect.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "28",
+      "input": "A wonderful experience overall.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "29",
+      "input": "It\u2019s been excellent so far.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "30",
+      "input": "Top-notch. Worth it.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "31",
+      "input": "Terrible quality. Broke immediately.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "32",
+      "input": "Not worth the money at all.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "33",
+      "input": "I regret buying this. Total waste.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "34",
+      "input": "Very disappointed. Poor performance.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "35",
+      "input": "Stopped working after one day.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "36",
+      "input": "The packaging was damaged and messy.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "37",
+      "input": "Awful experience. Would not recommend.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "38",
+      "input": "This is the worst product I\u2019ve purchased.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "39",
+      "input": "Customer service was unhelpful.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "40",
+      "input": "It arrived late and didn\u2019t work.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "41",
+      "input": "Cheap materials and poorly made.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "42",
+      "input": "It failed within a week.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "43",
+      "input": "Completely useless. Do not buy.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "44",
+      "input": "I\u2019m unhappy with the quality.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "45",
+      "input": "It\u2019s frustrating and unreliable.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "46",
+      "input": "Broke during normal use.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "47",
+      "input": "The description was misleading.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "48",
+      "input": "Bad smell and poor finishing.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "49",
+      "input": "Very poor value for the price.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "50",
+      "input": "Disappointed \u2014 expected much better.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "51",
+      "input": "It scratches easily and feels flimsy.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "52",
+      "input": "Didn\u2019t match what was advertised.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "53",
+      "input": "I had to return it. Not good.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "54",
+      "input": "Waste of time and money.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "55",
+      "input": "Faulty on arrival. Terrible.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "56",
+      "input": "It doesn\u2019t do what it claims.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "57",
+      "input": "Not satisfied. Would avoid.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "58",
+      "input": "Performance is bad and inconsistent.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "59",
+      "input": "Terrible service and rude support.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    },
+    {
+      "id": "60",
+      "input": "It\u2019s a complete letdown.",
+      "label": "negative",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "n_examples": 10.0,
+    "accuracy": 0.9,
+    "n_errors": 1.0,
+    "abstention_rate": 0.1,
+    "coverage": 0.9,
+    "known_accuracy": 1.0,
+    "effective_accuracy": 0.9,
+    "bucket_summary": {
+      "abstained": 1
+    }
+  },
+  "bucket_summary": {
+    "other": 1
+  },
+  "errors": [
+    {
+      "id": "3",
+      "input": "Pretty good overall, but shipping was slow.",
+      "label": "positive",
+      "prediction": "unknown",
+      "bucket": "abstained"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+# 
+rc/predictors.py
+
+from __future__ import annotations
+
+import random
+import re
+import time
+from pathlib import Path
+from typing import Protocol
+
+from openai import OpenAI
+
+
+
+# Predictor protocol
+class Predictor(Protocol):
+    def predict(self, text: str) -> str:
+        ...
+
+
+
+# OpenAI-backed predictor
+class OpenAILLMPredictor:
+    def __init__(
+        self,
+        prompt_path: Path,
+        model: str = "gpt-4.1-mini",
+        timeout_s: float = 30.0,
+        threshold: float = 0.75,
+        max_retries: int = 5,
+    ):
+        self.prompt_path = Path(prompt_path)
+        self.model = model
+        self.timeout_s = timeout_s
+        self.threshold = threshold
+        self.max_retries = max_retries
+
+        self._client = OpenAI()
+        self._total_calls = 0
+
+        # simple RPM throttle (very conservative)
+        self._last_call_ts = 0.0
+        self._min_interval_s = 20.0 / 3.0  # ~3 RPM safety
+
+
+    
+    # Throttle helper
+    def _throttle(self) -> None:
+        now = time.time()
+        elapsed = now - self._last_call_ts
+        if elapsed < self._min_interval_s:
+            time.sleep(self._min_interval_s - elapsed)
+        self._last_call_ts = time.time()
+
+
+    
+    # Usage stats (optional)
+    def usage(self) -> dict:
+        return {
+            "prompt_path": str(self.prompt_path),
+            "total_calls": self._total_calls,
+            "threshold": self.threshold,
+        }
+
+
+  
+    # Prediction
+    def predict(self, text: str) -> str:
+        template = self.prompt_path.read_text(encoding="utf-8")
+        prompt = template.format(text=text)
+
+        self._total_calls += 1
+
+        # ---- call with retry ----
+        attempt = 0
+        while True:
+            self._throttle()
+            try:
+                resp = self._client.responses.create(
+                    model=self.model,
+                    input=prompt,
+                    temperature=0.0,
+                )
+                break
+            except Exception as e:
+                msg = str(e).lower()
+                is_rate_limited = (
+                    "ratelimit" in type(e).__name__.lower()
+                    or "rate limit" in msg
+                    or "429" in msg
+                )
+                if not is_rate_limited:
+                    raise
+                attempt += 1
+                if attempt > self.max_retries:
+                    raise
+                time.sleep(min(60.0, 2 ** attempt) + random.uniform(0.0, 1.0))
+
+        #raw-model-output
+        out = (resp.output_text or "").strip().lower()
+
+        #parse-label
+        m_label = re.search(
+            r"label:\s*(positive|negative|unknown)",
+            out,
+            re.IGNORECASE,
+        )
+        label = m_label.group(1).lower() if m_label else None
+
+        #parse-confidence-(robust
+        m_conf = re.search(
+            r"confidence:\s*([0-9]+(?:[.,][0-9]+)?)",
+            out,
+            re.IGNORECASE,
+        )
+        conf = float(m_conf.group(1).replace(",", ".")) if m_conf else None
+
+        #valia

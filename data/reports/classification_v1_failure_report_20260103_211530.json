@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "n_examples": 10.0,
+    "accuracy": 0.5,
+    "n_errors": 5.0
+  },
+  "bucket_summary": {
+    "keyword_overtrigger": 5
+  },
+  "errors": [
+    {
+      "id": "1",
+      "input": "I loved this product, it works perfectly.",
+      "label": "positive",
+      "prediction": "negative"
+    },
+    {
+      "id": "3",
+      "input": "Pretty good overall, but shipping was slow.",
+      "label": "positive",
+      "prediction": "negative"
+    },
+    {
+      "id": "5",
+      "input": "Customer support was helpful and resolved my issue.",
+      "label": "positive",
+      "prediction": "negative"
+    },
+    {
+      "id": "7",
+      "input": "Exactly as described. I would buy again.",
+      "label": "positive",
+      "prediction": "negative"
+    },
+    {
+      "id": "9",
+      "input": "Decent value for the price.",
+      "label": "positive",
+      "prediction": "negative"
+    }
+  ]
+}
