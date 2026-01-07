@@ -1,0 +1,1 @@
+{"id": "1", "input": "Absolutely love this. Works perfectly.", "gold_label": "positive", "raw_output": "label: positive\nconfidence: 0.95", "pred_label": "positive", "confidence": 0.95}

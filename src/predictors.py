@@ -12,17 +12,12 @@ from openai import OpenAI
 from openai import RateLimitError
 
 
-# =========================
 # Predictor protocol
-# =========================
 class Predictor(Protocol):
     def predict(self, text: str) -> str:
         ...
 
-
-# =========================
 # STUB PREDICTOR (offline evals)
-# =========================
 class PromptedStubLLMPredictor:
     """
     Deterministic stub predictor for evaluation loops.
@@ -52,9 +47,7 @@ class PromptedStubLLMPredictor:
         return "positive"
 
 
-# =========================
 # OPENAI PREDICTOR (live sampling only)
-# =========================
 class OpenAILLMPredictor:
     """
     OpenAI-backed predictor.
