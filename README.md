@@ -1,6 +1,16 @@
 # Applied-AI-Pathway
 This repo documents my applied AI pathway
 
+## Project Highlights
+
+- Built an evaluation-first sentiment classification pipeline (not just inference)
+- Implemented confidence-based abstention (`unknown`) for safer predictions
+- Separated live LLM calls from offline evaluation using frozen outputs
+- Designed error bucketing to diagnose systematic failures (negation, implicit negativity)
+- Calibrated confidence thresholds to balance accuracy vs coverage
+- Added production-oriented docs: monitoring, rollback, and rollout plans
+
+
 # Applied AI Pathway
 
 This repository documents my Applied AI execution pathway.
@@ -98,6 +108,8 @@ From repo root:
 
 ## License
 MIT
+
+- [Model comparison](docs/model_comparison.md)
 
 
 ```bash
